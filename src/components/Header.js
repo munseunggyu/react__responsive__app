@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import headerImg from '../img/header_bg.jpg';
 import {AiFillFacebook, AiFillGithub, AiFillHtml5, AiOutlineTwitter} from 'react-icons/ai'
-
+import {BiMessageAlt} from 'react-icons/bi'
 const HeaderBg = styled.header`
   width:100%;
   height:320px;
@@ -71,28 +71,64 @@ const HeaderTitleContainer = styled(motion.div)`
     }
 `;
 
-const HeaderIconContainer = styled.div`
+const HeaderIconsWrapper = styled.div`
   display: flex;
   align-items:center;
   justify-content:center;
   background-color:inherit;
   margin-top:77px;
-  div{
-    border-radius:50%;
-    width:60px;
-    height:60px;
-    color:white;
-    background-color:#3192BF;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    margin-right:7px;
-  }
+
   @media screen and (max-width: 512px) { // 모바일
     display: none;
     }
 `;
-
+const HeaderIconContainer = styled(motion.div)`
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  color:white;
+  background-color:#3192BF;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:7px;
+  position:relative;
+ 
+`;
+const Ballon = styled(motion.div)`
+  /* opacity:0; */
+  position: absolute;
+  width: 55px;
+  height: 20px;
+  top:-33px;
+  background: #2498D1;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 12.8px;
+  font-size:12px;
+  &::after{
+    border-top: 7px solid #2498D1;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  bottom:-7px;
+  }
+`;
+  const glowVariants = {
+    initial: {
+      opacity:0,
+      top:-40
+    },
+    hover: {
+      opacity:1,
+      top:-30
+    }
+  }
 
 function Header(){
   return(
@@ -116,12 +152,36 @@ function Header(){
             MUNSEUNGGYU.CO.KR
           </h5>
         </HeaderTitleContainer>
-        <HeaderIconContainer>
-          <div><AiFillHtml5 size='38' /></div>
-          <div><AiFillGithub size='38' /></div>
-          <div><AiFillFacebook size='38' /></div>
-          <div><AiOutlineTwitter size='38' /></div>
-        </HeaderIconContainer>
+        <HeaderIconsWrapper>
+
+          <HeaderIconContainer
+           initial='initial'
+           whileHover='hover'
+          >
+            <AiFillHtml5 size='38' />
+            <Ballon variants={glowVariants}>HTML5</Ballon>
+          </HeaderIconContainer>
+
+          <HeaderIconContainer
+           initial='initial'
+           whileHover='hover'
+          >
+            <AiFillGithub size='38' />
+            <Ballon  variants={glowVariants} >Github</Ballon>
+          </HeaderIconContainer>
+          <HeaderIconContainer
+           initial='initial'
+           whileHover='hover'>
+            <AiFillFacebook size='38' />
+            <Ballon variants={glowVariants}>Facebook</Ballon>
+          </HeaderIconContainer>
+          <HeaderIconContainer
+            initial='initial'
+            whileHover='hover'>
+            <AiOutlineTwitter size='38' />
+            <Ballon variants={glowVariants}>twitter</Ballon>
+          </HeaderIconContainer>
+        </HeaderIconsWrapper>
       </HeaderContainer>
     </HeaderBg>
   )
