@@ -111,12 +111,12 @@ const Ballon = styled(motion.div)`
   font-size:12px;
   &::after{
     border-top: 7px solid #2498D1;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-bottom: 0px solid transparent;
-  content: "";
-  position: absolute;
-  bottom:-7px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    bottom:-7px;
   }
 `;
   const glowVariants = {

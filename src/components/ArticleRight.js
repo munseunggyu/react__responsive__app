@@ -1,5 +1,6 @@
 import { AriticleLeftContainer } from "./ArticleLeft"
 
+
 function AriticleRight(){
   return(
     <AriticleLeftContainer>

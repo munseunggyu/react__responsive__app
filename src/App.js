@@ -13,14 +13,14 @@ const MainContainer = styled.div`
 `;
 const Did = styled.div`
   display: grid;
-  grid-template-columns:0.2fr 0.6fr 0.2fr;
+  grid-template-columns:2fr 6fr 2fr;
   width:85%;
   @media screen and (max-width: 1220px) { // 테블릿
     width:100%;
   }
   @media screen and (max-width: 960px) { // 데스크탑
-    grid-template-columns:0.3fr 0.7fr;
-    grid-template-rows:0.8fr 0.2fr;
+    grid-template-columns:3fr 7fr;
+    grid-template-rows:8fr 2fr;
   }
   @media screen and (max-width: 768px) { // 테블릿
     display: flex;
