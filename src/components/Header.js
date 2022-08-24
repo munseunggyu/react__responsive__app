@@ -8,7 +8,7 @@ const HeaderBg = styled.header`
   height:320px;
   background-size : cover;
   background-position : center;
-  @media screen and (max-width: 512px) { // 모바일
+  @media screen and (max-width: 600px) { // 모바일
     height:40px;
   }
 `;
@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
   display: flex;
   flex-direction:column;
   align-items:center;
-  @media screen and (max-width: 512px) { // 모바일
+  @media screen and (max-width: 600px) { // 모바일
     width:90%;
     }
 `
@@ -66,7 +66,7 @@ const HeaderTitleContainer = styled(motion.div)`
     font-size:15px;
     background-color:#4A9ABF;
   }
-  @media screen and (max-width: 512px) { // 모바일
+  @media screen and (max-width: 600px) { // 모바일
     display: none;
     }
 `;
@@ -78,7 +78,7 @@ const HeaderIconsWrapper = styled.div`
   background-color:inherit;
   margin-top:77px;
 
-  @media screen and (max-width: 512px) { // 모바일
+  @media screen and (max-width: 600px) { // 모바일
     display: none;
     }
 `;
