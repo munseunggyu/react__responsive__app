@@ -16,6 +16,7 @@ export const BoxTitle = styled.div`
   }
   p{
     color:rgba(0,0,0,0.4);
+    font-size:14px;
     margin-bottom:20px;
   }
 `;

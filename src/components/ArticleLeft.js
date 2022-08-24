@@ -3,7 +3,12 @@ import { BoxContainer, BoxTitle, Title } from "../css/commonCss";
 import {BsChevronDoubleRight} from 'react-icons/bs'
 import { motion } from "framer-motion";
 import {AiFillPlusCircle} from 'react-icons/ai'
-import {BsDot} from 'react-icons/bs'
+import blogImg1_01 from '../img/blog4_@1.jpg'
+import blogImg1_02 from '../img/blog4_@2.jpg'
+import blogImg1_03 from '../img/blog4_@3.jpg'
+import blogImg2_01 from '../img/blog3_@1.jpg'
+import blogImg2_02 from '../img/blog3_@2.jpg'
+import blogImg2_03 from '../img/blog3_@3.jpg'
 
 export const AriticleLeftContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
@@ -113,6 +118,39 @@ const NoticeTwoli = styled.li`
   }
 `;
 
+const BlogConatiner = styled.div`
+  padding: 0 14px;
+`;
+const BlogImg = styled.div`
+  background-image:${props=> props.bgImg === '1'
+  ? `url(${blogImg1_01})` 
+  : `url(${blogImg2_01})` };
+  width:100%;
+  height:80px;
+  background-position:center;
+  background-size : cover;
+  margin-bottom:8px;
+  margin-top:5px;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 2dppx) {
+      background-image:${props=> props.bgImg === '1'
+      ? `url(${blogImg1_02})` 
+      : `url(${blogImg2_02})`};
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 3dppx) {
+        background-image:${props=> props.bgImg === '1'
+        ? `url(${blogImg1_03})` 
+        : `url(${blogImg2_03})`};
+  }
+`;
+const Text = styled.p`
+  font-size:14px;
+  color:rgba(0,0,0,.65);
+  margin-bottom:15px;
+`;
 function AriticleLeft(){
   let text = ['CAFE','TUTORIAL','WEBSITE','REFERENCE','CSS3','HTML5']
   let repeat = [1,2,3,4]
@@ -173,6 +211,27 @@ function AriticleLeft(){
           )} 
         </NoticeEffect>
       </BoxContainer>
+      <BoxContainer>
+        <BoxTitle>
+          <h3>
+            Blog
+          </h3>
+          <p>
+            해상도에 따라 이미지를 다르게 표현하는 방법이다
+          </p>
+        </BoxTitle>
+      </BoxContainer>
+      <BlogConatiner>
+        <BlogImg bgImg='1' />
+        <Text>
+          반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
+        </Text>
+        <BlogImg bgImg='2' /> 
+        <Text>
+        반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
+        </Text>
+      </BlogConatiner>
+      
     </AriticleLeftContainer>
   )
 }

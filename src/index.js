@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  letter-spacing:1px;
+
 }
 ol, ul {
 	list-style: none;
