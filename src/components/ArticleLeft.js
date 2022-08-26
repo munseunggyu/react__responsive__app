@@ -13,7 +13,6 @@ import blogImg2_03 from '../img/blog3_@3.jpg'
 export const AriticleLeftContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
   border-top:0;
-  /* height:100%; */
 `;
 
 const MenuCardContainer = styled(motion.div)`
