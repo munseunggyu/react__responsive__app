@@ -1,10 +1,14 @@
+import { BoxContainer } from "../css/commonCss"
 import { AriticleLeftContainer } from "./ArticleLeft"
 
 
 function AriticleRight(){
   return(
     <AriticleLeftContainer>
-      right
+      <BoxContainer>
+
+        adsf
+      </BoxContainer>
     </AriticleLeftContainer>
   )
 }

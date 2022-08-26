@@ -13,8 +13,7 @@ import blogImg2_03 from '../img/blog3_@3.jpg'
 export const AriticleLeftContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
   border-top:0;
-  height:100%;
-  /* display: flex; */
+  /* height:100%; */
 `;
 
 const MenuCardContainer = styled(motion.div)`
@@ -41,14 +40,16 @@ const menuVariants = {
   hover:{
     color:'white',
     backgroundColor:'#2C95C3',
-    
+    transition:{
+      type:'sping'
+    }
   }
 };
 
 const NoticeHeader = styled.div`
   display: flex;
   justify-content:space-between;
-  color:rgba(0,0,0,0.4);
+  color:${props => props.theme.pColor};
   h3{
     font-size:16px;
     color:#3A83A9;
@@ -67,7 +68,7 @@ const NoticeHeader = styled.div`
 const NoticeEffect = styled.ul`
   padding:14px;
   font-size:13px;
-  max-width:242px;
+  max-width:240px;
   color: rgba(0,0,0,0.6);
   @media screen and (max-width: 768px) { // 테블릿
     max-width:100%;
@@ -118,9 +119,7 @@ const NoticeTwoli = styled.li`
   }
 `;
 
-const BlogConatiner = styled.div`
-  padding: 0 14px;
-`;
+
 const BlogImg = styled.div`
   background-image:${props=> props.bgImg === '1'
   ? `url(${blogImg1_01})` 
@@ -139,12 +138,15 @@ const BlogImg = styled.div`
       : `url(${blogImg2_02})`};
   }
   @media only screen and (-webkit-min-device-pixel-ratio: 3),
-      only screen and (min-device-pixel-ratio: 3),
-      only screen and (min-resolution: 3dppx) {
-        background-image:${props=> props.bgImg === '1'
-        ? `url(${blogImg1_03})` 
-        : `url(${blogImg2_03})`};
+    only screen and (min-device-pixel-ratio: 3),
+    only screen and (min-resolution: 3dppx) {
+      background-image:${props=> props.bgImg === '1'
+      ? `url(${blogImg1_03})` 
+      : `url(${blogImg2_03})`};
   }
+  @media screen and (max-width: 768px) { // 테블릿
+    height:205px;
+}
 `;
 const Text = styled.p`
   font-size:14px;
@@ -220,8 +222,6 @@ function AriticleLeft(){
             해상도에 따라 이미지를 다르게 표현하는 방법이다
           </p>
         </BoxTitle>
-      </BoxContainer>
-      <BlogConatiner>
         <BlogImg bgImg='1' />
         <Text>
           반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
@@ -230,8 +230,7 @@ function AriticleLeft(){
         <Text>
         반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
         </Text>
-      </BlogConatiner>
-      
+      </BoxContainer>
     </AriticleLeftContainer>
   )
 }

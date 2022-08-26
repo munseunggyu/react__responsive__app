@@ -21,6 +21,7 @@ const Did = styled.div`
   @media screen and (max-width: 960px) { // 데스크탑
     grid-template-columns:3fr 7fr;
     grid-template-rows:8fr 2fr;
+    
   }
   @media screen and (max-width: 768px) { // 테블릿
     display: flex;

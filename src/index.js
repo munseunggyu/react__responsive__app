@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import App from './App';
+import { ColorTheme } from './theme';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -32,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   letter-spacing:1px;
+	height:2000px;
 
 }
 ol, ul {
@@ -57,8 +59,10 @@ table {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+		<ThemeProvider theme={ColorTheme}>
     <GlobalStyle />
     <App />
+		</ThemeProvider>
   </React.StrictMode>
 );
 

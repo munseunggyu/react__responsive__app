@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import headerImg from '../img/header_bg.jpg';
 import {AiFillFacebook, AiFillGithub, AiFillHtml5, AiOutlineTwitter} from 'react-icons/ai'
-import {BiMessageAlt} from 'react-icons/bi'
+
 const HeaderBg = styled.header`
   width:100%;
   height:320px;
@@ -77,10 +77,9 @@ const HeaderIconsWrapper = styled.div`
   justify-content:center;
   background-color:inherit;
   margin-top:77px;
-
   @media screen and (max-width: 600px) { // 모바일
     display: none;
-    }
+  }
 `;
 const HeaderIconContainer = styled(motion.div)`
   border-radius:50%;

@@ -8,7 +8,7 @@ const MainTitleContainer = styled.div`
   align-items:center;
   justify-content:center;
   h3{
-    color:#1C97C0;
+    color:${props => props.theme.titleColor};
     font-size:40px;
     font-family: 'Nanum Pen Script', cursive;
   }
