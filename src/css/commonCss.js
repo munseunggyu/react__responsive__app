@@ -4,6 +4,9 @@ export const BoxContainer  = styled.div`
   padding:14px;
   width:100%;
   border-bottom:1px solid rgba(0,0,0,0.2);
+  &:last-child{
+    border-bottom:0;
+  }
 `;
 export const BoxTitle = styled.div`
   margin-top:11px;

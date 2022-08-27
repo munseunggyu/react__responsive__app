@@ -1,22 +1,24 @@
 import styled from "styled-components";
 import { BoxContainer, BoxTitle } from "../css/commonCss";
 import uuid from 'react-uuid';
-import Slider from './Slider'
-import img1 from '../img/light01.jpg'
-import img2 from '../img/light02.jpg'
-import img3 from '../img/light03.jpg'
-import img4 from '../img/light04.jpg'
-import img5 from '../img/light05.jpg'
-import img6 from '../img/light06.jpg'
-import img7 from '../img/light07.jpg'
-import img8 from '../img/light08.jpg'
-import img9 from '../img/light09.jpg'
-import img10 from '../img/light10.jpg'
+import Slider from './Slider';
+import img1 from '../img/light01.jpg';
+import img2 from '../img/light02.jpg';
+import img3 from '../img/light03.jpg';
+import img4 from '../img/light04.jpg';
+import img5 from '../img/light05.jpg';
+import img6 from '../img/light06.jpg';
+import img7 from '../img/light07.jpg';
+import img8 from '../img/light08.jpg';
+import img9 from '../img/light09.jpg';
+import img10 from '../img/light10.jpg';
 import { motion } from "framer-motion";
+import ReactPlayer from "react-player";
 
 const SectionContainer = styled.div`
   width:100%;
   padding-bottom:20px;
+  border-bottom:1px solid rgba(0,0,0,0.2);
 `;
 const ImgContainer = styled.div`
   display: flex;
@@ -54,6 +56,11 @@ const ImgTemplate = styled.img`
   &:hover{
     filter:${props => props.filter};
   }
+`;
+
+const ReactPlayerContainer = styled.div`
+  width:100%;
+  height:373px;
 `;
 
 const ImgpVariants = {
@@ -118,7 +125,20 @@ function MainSection(){
       </ImgWrapper>
     )}
     </ImgContainer>
-    
+     </BoxContainer>
+     <BoxContainer>
+      <BoxTitle>
+        <h3>Video</h3>
+        <p>
+          영상을 보주는 영역입니다.
+        </p>
+      </BoxTitle>
+      <ReactPlayerContainer>
+      <ReactPlayer 
+        url='https://www.youtube.com/watch?v=G0psQ54f5zE'
+        width='100%'
+      />
+      </ReactPlayerContainer>
      </BoxContainer>
    </SectionContainer>
   )
