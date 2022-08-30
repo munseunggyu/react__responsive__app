@@ -10,9 +10,15 @@ import blogImg2_01 from '../img/blog3_@1.jpg'
 import blogImg2_02 from '../img/blog3_@2.jpg'
 import blogImg2_03 from '../img/blog3_@3.jpg'
 
-export const AriticleLeftContainer = styled.div`
+export const AriticleContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
+  width:250px;
   border-top:0;
+  flex-shrink: 0;
+ 
+  @media screen and (max-width: 768px) { // 테블릿
+    width:100%;
+  }
 `;
 
 const MenuCardContainer = styled(motion.div)`
@@ -156,7 +162,7 @@ function AriticleLeft(){
   let text = ['CAFE','TUTORIAL','WEBSITE','REFERENCE','CSS3','HTML5']
   let repeat = [1,2,3,4]
   return(
-    <AriticleLeftContainer>
+    <AriticleContainer>
       <BoxContainer>
         <BoxTitle>
           <h3>
@@ -230,7 +236,7 @@ function AriticleLeft(){
         반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
         </Text>
       </BoxContainer>
-    </AriticleLeftContainer>
+    </AriticleContainer>
   )
 }
 

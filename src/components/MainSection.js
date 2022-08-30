@@ -16,9 +16,18 @@ import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 
 const SectionContainer = styled.div`
-  width:100%;
+  width:calc(100% - 500px);
   padding-bottom:20px;
   border-bottom:1px solid rgba(0,0,0,0.2);
+
+  @media screen and (max-width: 960px) { // 데스크탑
+    width:calc(100% - 250px);
+  flex-shrink:2;
+
+  }
+  @media screen and (max-width: 768px) { // 테블릿
+    width:100%;
+  }
 `;
 const ImgContainer = styled.div`
   display: flex;
@@ -26,6 +35,7 @@ const ImgContainer = styled.div`
   justify-content:center;
   gap:5px; 
   margin-bottom:5px;
+ 
  
 `;
 const ImgWrapper = styled(motion.div)`
@@ -60,7 +70,7 @@ const ImgTemplate = styled.img`
 
 const ReactPlayerContainer = styled.div`
   width:100%;
-  height:373px;
+  height:340px;
 `;
 
 const ImgpVariants = {

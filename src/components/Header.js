@@ -97,7 +97,6 @@ const HeaderIconContainer = styled(motion.div)`
 const Ballon = styled(motion.div)`
   /* opacity:0; */
   position: absolute;
-  width: 55px;
   height: 20px;
   top:-33px;
   background: #2498D1;
@@ -106,7 +105,7 @@ const Ballon = styled(motion.div)`
   display: flex;
   align-items:center;
   justify-content:center;
-  padding: 12px 12.8px;
+  padding: 12px 8px;
   font-size:12px;
   &::after{
     border-top: 7px solid #2498D1;

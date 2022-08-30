@@ -9,19 +9,19 @@ export const BoxContainer  = styled.div`
   }
 `;
 export const BoxTitle = styled.div`
-  margin-top:11px;
+  margin-top:7px;
   border-bottom:1px dashed rgba(0,0,0,0.15);
   margin-bottom:12px;
   
   h3{
     color:${props => props.theme.titleColor};
     font-size:22px;
-    margin-bottom:20px;
+    margin-bottom:8px;
   }
   p{
     color:${props => props.theme.pColor};
     font-size:14px;
-    margin-bottom:20px;
+    margin-bottom:15px;
   }
 `;
 

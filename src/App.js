@@ -11,20 +11,16 @@ const MainContainer = styled.div`
   display: flex;
   justify-content:center;
 `;
-const Did = styled.div`
-  display: grid;
-  grid-template-columns:2fr 6fr 2fr;
+const FlexContainer = styled.div`
+  display: flex;
   width:85%;
   @media screen and (max-width: 1220px) { // 테블릿
     width:100%;
   }
   @media screen and (max-width: 960px) { // 데스크탑
-    grid-template-columns:3fr 7fr;
-    grid-template-rows:8fr 2fr;
-    
+   flex-wrap:wrap;
   }
   @media screen and (max-width: 768px) { // 테블릿
-    display: flex;
     flex-direction:column;
   }
   @media screen and (max-width: 600px) { // 모바일
@@ -37,11 +33,11 @@ function Home(){
       <Header />
       <MainTitle />
       <MainContainer>
-        <Did>
+        <FlexContainer>
         <AriticleLeft />
         <MainSection />
         <AriticleRight />
-        </Did>
+        </FlexContainer>
       </MainContainer>
     </>
   )
