@@ -59,7 +59,7 @@ const NoticeHeader = styled.div`
     font-size:16px;
     color:#3A83A9;
   }
-  div{
+  div{  
     font-size:11px;
     display: flex;
     margin-top:5px;
