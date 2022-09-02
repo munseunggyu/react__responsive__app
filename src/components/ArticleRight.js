@@ -5,8 +5,14 @@ import side2 from '../img/side2.jpg'
 import side3 from '../img/side3.jpg'
 import side4 from '../img/side4.jpg'
 import styled from "styled-components"
-// import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 import {AiFillHeart} from 'react-icons/ai'
+
+const Img = styled.img`
+  width:100%;
+  height:100%;
+`;
+
 
 const AriticleRTContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
@@ -30,13 +36,13 @@ const Side12Container = styled.div`
   width:100%;
   height:307px;
   position: relative;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; 
   transition: 1s;
   &:hover{
     transform:rotateY(180deg);
   }
   @media screen and (max-width: 960px) { // 데스크탑
-   height:382px;
+   /* height:382px; */
   }
   @media screen and (max-width: 768px) { // 데스크탑
     height:242px
@@ -51,7 +57,6 @@ const Front = styled.figure`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   text-align: center;
   backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -63,7 +68,7 @@ const Back = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:inherit;
   transform-style: preserve-3d;
   display: flex;
   align-items:center;
@@ -71,7 +76,7 @@ const Back = styled.div`
   backface-visibility: hidden;
 `;
 
-const Side2FigureCaption = styled.figcaption`
+const Side2FigCaption = styled.figcaption`
   position: absolute;
   left:50%;
   top:50%;
@@ -85,11 +90,49 @@ const Side2FigureCaption = styled.figcaption`
   padding: 10px 7px;
 `;
 
-const Img = styled.img`
-  width:100%;
-  height:100%;
+
+const Side3Figure = styled(motion.figure)`
+  position: relative;
+  overflow:hidden;
+  padding:0;
+  margin:0;
+  ${Img}:hover{
+    opacity: .4;
+  }
 `;
 
+const Side3FigCaption = styled(motion.figcaption)`
+  width:100px;
+  height:100px;
+  background-color:black;
+  color:white;
+  border-radius:50%;
+  position: absolute;
+  top:35%;
+  left:28%;
+  display: flex;
+  align-items:center;
+  justify-content:center;  
+  h4{
+    text-align:center;
+  }
+`;
+
+
+const side3Variants = {
+  initial:{
+    x:200,
+    rotate:360,
+  },
+  hover:{
+    rotate:0,
+    x:0,
+  },
+  bgHover:{
+    backgroundColor:'rgba(0,0,0,0.4)'
+  }
+  
+}
 
 function AriticleRight(){
   return(
@@ -120,39 +163,38 @@ function AriticleRight(){
         <Side12Container>
         <Front>
           <Img src={side2} alt='마우스 오버 효과 이미지2' />
-          <Side2FigureCaption>
+          <Side2FigCaption>
             Hover Effect
-          </Side2FigureCaption>
+          </Side2FigCaption>
         </Front>
         <Back>
          <Img src={side4} alt='마우스 오버 효과 이미지4' />
-         <Side2FigureCaption>
+         <Side2FigCaption>
             Hover Effect
-          </Side2FigureCaption>
+          </Side2FigCaption>
         </Back>
         </Side12Container>
       </BoxContainer>
       <BoxContainer>
         <BoxTitle>
           <h3>
-            Effect2
+            Effect3
           </h3>
           <p>CSS3의 transform을 이용한 마우스 오버효과입니다</p>
         </BoxTitle>
-        <Side12Container>
-        <Front>
-          <Img src={side2} alt='마우스 오버 효과 이미지2' />
-          <Side2FigureCaption>
-            Hover Effect
-          </Side2FigureCaption>
-        </Front>
-        <Back>
-         <Img src={side4} alt='마우스 오버 효과 이미지4' />
-         <Side2FigureCaption>
-            Hover Effect
-          </Side2FigureCaption>
-        </Back>
-        </Side12Container>
+        <Side3Figure
+          initial='initial'
+          whileHover='hover'
+          whiteHover={{}}
+        >
+          <Img src={side3} alt='마우스 오버 효과 이미지3' />
+          <Side3FigCaption
+          variants={side3Variants}
+          transition={{type:'tween'}}
+          >
+            <h4>HOVER EFFECT</h4>
+          </Side3FigCaption>
+        </Side3Figure>
       </BoxContainer>
     </AriticleRTContainer>
   )
