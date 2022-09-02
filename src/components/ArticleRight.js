@@ -1,10 +1,12 @@
 import { BoxContainer, BoxTitle } from "../css/commonCss"
 import { AriticleContainer } from "./ArticleLeft"
 import side1 from '../img/side1.jpg'
+import side2 from '../img/side2.jpg'
+import side3 from '../img/side3.jpg'
+import side4 from '../img/side4.jpg'
 import styled from "styled-components"
 // import { motion } from "framer-motion"
 import {AiFillHeart} from 'react-icons/ai'
-import { motion  } from "framer-motion-3d"
 
 const AriticleRTContainer = styled.div`
   border:1px solid rgba(0,0,0,0.2);
@@ -13,30 +15,46 @@ const AriticleRTContainer = styled.div`
   flex-shrink: 0;
   @media screen and (max-width: 960px) { // 데스크탑
     width:100%;
+    display: flex;
   }
+  @media screen and (max-width: 600px) { // 테블릿
+    & > ${BoxContainer}:last-child{
+      display:none;
+    }
+  }
+
 `;
 
-const Side1Container = styled.div`
+const Side12Container = styled.div`
   perspective: 1000;
   width:100%;
   height:307px;
   position: relative;
   transform-style: preserve-3d;
-  transition: 0.5s;
+  transition: 1s;
   &:hover{
     transform:rotateY(180deg);
   }
+  @media screen and (max-width: 960px) { // 데스크탑
+   height:382px;
+  }
+  @media screen and (max-width: 768px) { // 데스크탑
+    height:242px
+  }
+  @media screen and (max-width: 600px) { // 테블릿
+    height:307px;
+  }
 `;
+
 const Front = styled.figure`
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  color: white;
-  line-height: 50px;
   text-align: center;
   backface-visibility: hidden;
+  transform-style: preserve-3d;
 `;
 const Back = styled.div`
   transform: rotateY(180deg);
@@ -46,10 +64,25 @@ const Back = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  transform-style: preserve-3d;
   display: flex;
   align-items:center;
   justify-content:center;
   backface-visibility: hidden;
+`;
+
+const Side2FigureCaption = styled.figcaption`
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) translateZ(100px);
+  display: block;
+  text-align:center;
+  width:60%;
+  background-color:rgba(0,0,0,0.5);
+  color: white;
+  font-size:20px;
+  padding: 10px 7px;
 `;
 
 const Img = styled.img`
@@ -68,14 +101,58 @@ function AriticleRight(){
           </h3>
           <p>CSS3의 transform을 이용한 마우스 오버효과입니다</p>
         </BoxTitle>
-        <Side1Container>
+        <Side12Container>
         <Front>
-          <Img src={side1} />
+          <Img src={side1} alt='마우스 오버 효과 이미지1' />
         </Front>
         <Back>
           <AiFillHeart size='50' color='white' />
         </Back>
-        </Side1Container>
+        </Side12Container>
+      </BoxContainer>
+      <BoxContainer>
+        <BoxTitle>
+          <h3>
+            Effect2
+          </h3>
+          <p>CSS3의 transform을 이용한 마우스 오버효과입니다</p>
+        </BoxTitle>
+        <Side12Container>
+        <Front>
+          <Img src={side2} alt='마우스 오버 효과 이미지2' />
+          <Side2FigureCaption>
+            Hover Effect
+          </Side2FigureCaption>
+        </Front>
+        <Back>
+         <Img src={side4} alt='마우스 오버 효과 이미지4' />
+         <Side2FigureCaption>
+            Hover Effect
+          </Side2FigureCaption>
+        </Back>
+        </Side12Container>
+      </BoxContainer>
+      <BoxContainer>
+        <BoxTitle>
+          <h3>
+            Effect2
+          </h3>
+          <p>CSS3의 transform을 이용한 마우스 오버효과입니다</p>
+        </BoxTitle>
+        <Side12Container>
+        <Front>
+          <Img src={side2} alt='마우스 오버 효과 이미지2' />
+          <Side2FigureCaption>
+            Hover Effect
+          </Side2FigureCaption>
+        </Front>
+        <Back>
+         <Img src={side4} alt='마우스 오버 효과 이미지4' />
+         <Side2FigureCaption>
+            Hover Effect
+          </Side2FigureCaption>
+        </Back>
+        </Side12Container>
       </BoxContainer>
     </AriticleRTContainer>
   )

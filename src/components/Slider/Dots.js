@@ -8,12 +8,12 @@ const Dot_container = styled.div`
   flex-direction: row;
   justify-content: center;
   position: relative;
-  bottom: -150px;
+  bottom: -140px;
 `;
 
 const Dot = styled(motion.div)`
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: ${props => props.theme.titleColor};
   border-radius: 50%;
   opacity: 0.8;

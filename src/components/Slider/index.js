@@ -14,7 +14,7 @@ const SliderContanier = styled(motion.div)`
   overflow-x: hidden;
   position: relative;
   width:100%;
-  height:430px;
+  height:405px;
 `;
 
 const SliderShape = styled(motion.div)`
