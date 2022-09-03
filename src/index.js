@@ -33,7 +33,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   letter-spacing:1px;
-	height:2000px;
 
 }
 ol, ul {

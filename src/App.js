@@ -5,7 +5,7 @@ import AriticleRight from './components/ArticleRight';
 import Header from './components/Header';
 import MainSection from './components/MainSection';
 import MainTitle from './components/MainTitle';
-import { motion as motion3d } from "framer-motion-3d"
+import Footer from './components/Footer';
 
 const MainContainer = styled.div`
   width:100%;
@@ -41,7 +41,7 @@ function Home(){
         <AriticleRight />
         </FlexContainer>
       </MainContainer>
-    
+      <Footer />
     </>
   )
 }
