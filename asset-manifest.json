@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.js": "/react__responsive__app/static/js/main.48e8bbd4.js",
+    "static/media/light04_s.jpg": "/react__responsive__app/static/media/light04_s.33bd5b1f517ff05b9b08.jpg",
+    "static/media/light03_s.jpg": "/react__responsive__app/static/media/light03_s.6b57cad73f97bb5e4c8c.jpg",
+    "static/media/light02_s.jpg": "/react__responsive__app/static/media/light02_s.9757397576ecde091b73.jpg",
+    "static/media/header_bg.jpg": "/react__responsive__app/static/media/header_bg.99d2ed2d21842abb308a.jpg",
+    "static/media/side2.jpg": "/react__responsive__app/static/media/side2.e215c739811f59217ce9.jpg",
+    "static/media/side1.jpg": "/react__responsive__app/static/media/side1.8784a2d389ec5fb19e97.jpg",
+    "static/media/side4.jpg": "/react__responsive__app/static/media/side4.5fdf3ec6670e81d35939.jpg",
+    "static/media/side3.jpg": "/react__responsive__app/static/media/side3.0a42783969e27d4f58c2.jpg",
+    "static/media/blog4_@3.jpg": "/react__responsive__app/static/media/blog4_@3.38bc3c9899ec3bc6d4cb.jpg",
+    "static/media/blog3_@3.jpg": "/react__responsive__app/static/media/blog3_@3.1e910c55d4727a502fc6.jpg",
+    "static/media/light05.jpg": "/react__responsive__app/static/media/light05.e7fb4f7aa2eb88947b96.jpg",
+    "static/media/light04.jpg": "/react__responsive__app/static/media/light04.d180cb11ffd251e95454.jpg",
+    "static/media/light06.jpg": "/react__responsive__app/static/media/light06.261338366011e97e458f.jpg",
+    "static/media/light07.jpg": "/react__responsive__app/static/media/light07.af2a5e8121c023389aa3.jpg",
+    "static/media/light01.jpg": "/react__responsive__app/static/media/light01.753737cdbb4ad91d3fe5.jpg",
+    "static/media/light03.jpg": "/react__responsive__app/static/media/light03.3ce49317ef56a8e7dd66.jpg",
+    "static/media/light10.jpg": "/react__responsive__app/static/media/light10.541e52bb47e66ae64fb9.jpg",
+    "static/media/light09.jpg": "/react__responsive__app/static/media/light09.6ecdba5aaa9d2c30cd23.jpg",
+    "static/media/light08.jpg": "/react__responsive__app/static/media/light08.ed8b2399a4b4fc85c51a.jpg",
+    "static/media/blog4_@2.jpg": "/react__responsive__app/static/media/blog4_@2.02cff2fe68a2d485f9ba.jpg",
+    "static/media/light02.jpg": "/react__responsive__app/static/media/light02.6d742838434ccf986492.jpg",
+    "static/media/blog3_@2.jpg": "/react__responsive__app/static/media/blog3_@2.0a2057fe13fccf6a32e3.jpg",
+    "index.html": "/react__responsive__app/index.html",
+    "main.48e8bbd4.js.map": "/react__responsive__app/static/js/main.48e8bbd4.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.48e8bbd4.js"
+  ]
+}
