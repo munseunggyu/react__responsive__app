@@ -15,7 +15,7 @@ import img10 from '../img/light10.jpg';
 import { motion } from "framer-motion";
 import ReactPlayer from "react-player";
 
-const SectionContainer = styled.div`
+const CenterSectionContainer = styled.section`
   width:calc(100% - 500px);
   padding-bottom:20px;
   border-bottom:1px solid rgba(0,0,0,0.2);
@@ -84,7 +84,7 @@ const ImgpVariants = {
   }
 }
 
-function MainSection(){
+function CenterSection(){
   const imgs =[
     {img: img1,filter: 'blur(2px)',text:'blur'},
     {img: img2,filter: 'brightness(50%)',text:'brightness'},
@@ -99,7 +99,7 @@ function MainSection(){
   ]
   
   return(
-    <SectionContainer>
+    <CenterSectionContainer>
    <BoxContainer>
     <BoxTitle>
       <h3>
@@ -145,13 +145,12 @@ function MainSection(){
       </BoxTitle>
       <ReactPlayerContainer>
       <ReactPlayer 
-        url='https://www.youtube.com/watch?v=G0psQ54f5zE'
-        width='100%'
+        alt='유튜브 링크이다'
       />
       </ReactPlayerContainer>
      </BoxContainer>
-   </SectionContainer>
+   </CenterSectionContainer>
   )
 }
 
-export default MainSection;
+export default CenterSection;

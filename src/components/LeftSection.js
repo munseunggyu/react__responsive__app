@@ -10,7 +10,7 @@ import blogImg2_01 from '../img/blog3_@1.jpg'
 import blogImg2_02 from '../img/blog3_@2.jpg'
 import blogImg2_03 from '../img/blog3_@3.jpg'
 
-export const AriticleContainer = styled.div`
+export const LeftSectionContainer = styled.section`
   border:1px solid rgba(0,0,0,0.2);
   width:250px;
   border-top:0;
@@ -158,11 +158,11 @@ const Text = styled.p`
   color:rgba(0,0,0,.65);
   margin-bottom:15px;
 `;
-function AriticleLeft(){
+function LeftSection(){
   let text = ['CAFE','TUTORIAL','WEBSITE','REFERENCE','CSS3','HTML5']
   let repeat = [1,2,3,4]
   return(
-    <AriticleContainer>
+    <LeftSectionContainer>
       <BoxContainer>
         <BoxTitle>
           <h3>
@@ -236,8 +236,8 @@ function AriticleLeft(){
         반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다. 반응형 웹 사이트 이미지 글입니다.
         </Text>
       </BoxContainer>
-    </AriticleContainer>
+    </LeftSectionContainer>
   )
 }
 
-export default AriticleLeft;
+export default LeftSection;

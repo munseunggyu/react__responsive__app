@@ -1,13 +1,12 @@
 
 import styled from 'styled-components';
-import AriticleLeft from './components/ArticleLeft';
-import AriticleRight from './components/ArticleRight';
 import Header from './components/Header';
-import MainSection from './components/MainSection';
-import MainTitle from './components/MainTitle';
 import Footer from './components/Footer';
+import LeftSection from './components/LeftSection';
+import CenterSection from './components/CenterSection';
+import RightSection from './components/RightSection';
 
-const MainContainer = styled.div`
+const MainContainer = styled.main`
   width:100%;
   display: flex;
   justify-content:center;
@@ -33,12 +32,11 @@ function Home(){
   return(
     <>
       <Header />
-      <MainTitle />
       <MainContainer>
         <FlexContainer>
-        <AriticleLeft />
-        <MainSection />
-        <AriticleRight />
+        <LeftSection />
+        <CenterSection />
+        <RightSection />
         </FlexContainer>
       </MainContainer>
       <Footer />

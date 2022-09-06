@@ -40,7 +40,7 @@ function Footer(){
         }
       </FooterUl>
       <CopyRight>
-      Copyright © webstoryboy All Rights Reserved.
+        Copyright &copy; webstoryboy All Rights Reserved.
       </CopyRight>
     </FooterContainer>
   )

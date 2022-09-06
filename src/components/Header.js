@@ -2,12 +2,15 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import headerImg from '../img/header_bg.jpg';
 import {AiFillFacebook, AiFillGithub, AiFillHtml5, AiOutlineTwitter} from 'react-icons/ai'
+import MainTitle from './MainTitle';
 
 const HeaderBg = styled.header`
   width:100%;
-  height:320px;
+  
   background-size : cover;
   background-position : center;
+  display: flex;
+  flex-direction:column;
   @media screen and (max-width: 600px) { // 모바일
     height:40px;
   }
@@ -16,9 +19,11 @@ const HeaderContainer = styled.div`
     margin:0 auto;
     /* padding:10px 100px; */
   width:80%;
-  display: flex;
+  padding-bottom:40px;
+  /* display: flex;
+  
   flex-direction:column;
-  align-items:center;
+  align-items:center; */
   @media screen and (max-width: 600px) { // 모바일
     width:90%;
     }
@@ -44,7 +49,7 @@ const HeaderTitleContainer = styled(motion.div)`
   flex-direction:column;
   align-items:center;
   position: relative;
-  h3{
+  h2{
     display: flex;
     align-items:center;
     justify-content:center;
@@ -54,16 +59,15 @@ const HeaderTitleContainer = styled(motion.div)`
     height:58px;
    
   }
-  h5{
+  p{
     display: flex;
     align-items:center;
     justify-content:center;
     position: absolute;
     top:46px;
     z-index:2;
-    width:172px;
-    height:47px;
     font-size:15px;
+    padding:15px 20px;
     background-color:#4A9ABF;
   }
   @media screen and (max-width: 600px) { // 모바일
@@ -94,7 +98,7 @@ const HeaderIconContainer = styled(motion.div)`
   position:relative;
  
 `;
-const Ballon = styled(motion.div)`
+const Ballon = styled(motion.p)`
   /* opacity:0; */
   position: absolute;
   height: 20px;
@@ -139,16 +143,16 @@ function Header(){
         </HeaderLink>
         <HeaderTitleContainer
         >
-          <motion.h3
+          <motion.h2
             whileHover = {{
               backgroundColor:'#2784B1'
             }}
           >
             PROFESSIONAL WEB PUBLISHER
-          </motion.h3>
-          <h5>
+          </motion.h2>
+          <p>
             MUNSEUNGGYU.CO.KR
-          </h5>
+          </p>
         </HeaderTitleContainer>
         <HeaderIconsWrapper>
 
@@ -181,6 +185,7 @@ function Header(){
           </HeaderIconContainer>
         </HeaderIconsWrapper>
       </HeaderContainer>
+      <MainTitle />
     </HeaderBg>
   )
 }

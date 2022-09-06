@@ -1,5 +1,4 @@
 import { BoxContainer, BoxTitle } from "../css/commonCss"
-import { AriticleContainer } from "./ArticleLeft"
 import side1 from '../img/side1.jpg'
 import side2 from '../img/side2.jpg'
 import side3 from '../img/side3.jpg'
@@ -14,7 +13,7 @@ const Img = styled.img`
 `;
 
 
-const AriticleRTContainer = styled.div`
+const RightSectionContainer = styled.section`
   border:1px solid rgba(0,0,0,0.2);
   width:250px;
   border-top:0;
@@ -134,9 +133,9 @@ const side3Variants = {
   
 }
 
-function AriticleRight(){
+function RightSection(){
   return(
-    <AriticleRTContainer>
+    <RightSectionContainer>
       <BoxContainer>
         <BoxTitle>
           <h3>
@@ -185,7 +184,6 @@ function AriticleRight(){
         <Side3Figure
           initial='initial'
           whileHover='hover'
-          whiteHover={{}}
         >
           <Img src={side3} alt='마우스 오버 효과 이미지3' />
           <Side3FigCaption
@@ -196,8 +194,8 @@ function AriticleRight(){
           </Side3FigCaption>
         </Side3Figure>
       </BoxContainer>
-    </AriticleRTContainer>
+    </RightSectionContainer>
   )
 }
 
-export default AriticleRight
+export default RightSection
